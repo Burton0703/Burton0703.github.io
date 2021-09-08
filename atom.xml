@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Burton&#39;s Blog</title>
+  
+  <subtitle>小张的个人博客</subtitle>
+  <link href="https://burton0703.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://burton0703.github.io/"/>
+  <updated>2021-09-08T17:50:30.608Z</updated>
+  <id>https://burton0703.github.io/</id>
+  
+  <author>
+    <name>Burton</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="https://burton0703.github.io/2021/09/08/ru-he-shi-yong-github-hexo-mian-fei-da-jian-bo-ke/"/>
+    <id>https://burton0703.github.io/2021/09/08/ru-he-shi-yong-github-hexo-mian-fei-da-jian-bo-ke/</id>
+    <published>2021-09-08T17:50:30.607Z</published>
+    <updated>2021-09-08T17:50:30.608Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
