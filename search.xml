@@ -4,13 +4,50 @@
   
     
     <entry>
-      <title>[object Object]</title>
+      <title>如何使用GitHub+Hexo免费搭建博客</title>
       <link href="/2021/09/08/ru-he-shi-yong-github-hexo-mian-fei-da-jian-bo-ke/"/>
       <url>/2021/09/08/ru-he-shi-yong-github-hexo-mian-fei-da-jian-bo-ke/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>开始想写博客的初衷是为了梳理自己的思绪，更好的思考总结。<br>很多博客平台注册一个自己的博客很简单，但是无奈你需要接受平台各种限制和审核，以及对你博客页面的广告植入<br>而自己搭建不会像平台那样有各种审核限制 🚫，也不会有烦人的广告植入，总的来说就是更加自由自在。重要的是有免费的羊毛为什么不薅，于是经过自己的几番折腾 ➡️➡️ 产生了一条广告: <a href="https://burton0703.github.io/">我的个人博客</a> 😎</p><p>下面向大家分享一下如何使用 Hexo+Github 搭建属于自己的免费博客，同时看到这边文章的你在搭建的过程中如果有任何问题，也可以向我留言或者私信 ::email，大家一起交流讨论。</p><h2 id="什么是-Hexo"><a href="#什么是-Hexo" class="headerlink" title="什么是 Hexo"></a>什么是 Hexo</h2><p>Hexo 是一个快速、简单且功能强大的博客框架。你用 Markdown（或其他标记语言）写帖子，Hexo 会在几秒钟内生成带有漂亮主题的静态文件。</p><h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><p>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a><br>Mac:可以使用 <a href="https://brew.sh/">homebrew</a> 进行安装，或者 <a href="http://git-scm.com/download/mac">git</a><br>linux(Ubuntu, Debian): sudo apt-get install git-core<br>Linux (Fedora, Red Hat, CentOS): sudo yum install git-core<br>(安装后在终端输入 git version,显示版本号即安装成功)</p><h3 id="安装-node-js"><a href="#安装-node-js" class="headerlink" title="安装 node.js"></a>安装 node.js</h3><p>传送门:<a href="https://nodejs.org/en/">node.js</a><br>安装选项全部默认，一路点击 Next。<br>安装成功后打开终端依次输入 node -v 和 npm -v，如果出现版本号就说明安装成功了。<br><img src="https://www.z4a.net/images/2021/09/07/iShot2021-09-07-10.06.45.png" alt="终端"></p><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>搭建环境准备好后，使用 npm 安装 Hexo:</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在终端输入 Hexo -v 验证是否安装成功</p><p>然后就可以正式搭建我们的博客了，首先在终端输入 mkdir blog 建一个新的文件夹（我们后面的所有操作都会在这个文件夹中，所以不用担心后面搭建过程中有什么错误问题，实在不行就删掉这个文件夹重来</p><h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">hexo init &lt;folder&gt;cd &lt;folder&gt;npm install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>然后就可以启动我们的博客了,启动命令:</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://www.z4a.net/images/2021/09/07/iShot2021-09-07-10.16.23.png" alt="终端"><br>然后打开浏览器,访问上图红圈的地址,就可以看到你的博客其实已经搭建好了.</p><h2 id="发一篇新文章"><a href="#发一篇新文章" class="headerlink" title="发一篇新文章"></a>发一篇新文章</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">hexo n "文章标题"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>此时会在 <code>source/_posts</code> 目录下生成文章题目.md 文件,输入些许内容,然后保存.<br>依次执行以下命令预览效果:</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">hexo cleanhexo ghexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>访问 localhost:4000 即可<br>或者也直接可以在 <code>source/_posts</code> 下新建一个.md 文件</p><h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><p>你可以在文件目录_config.yml 中修改大部分配置<br>或者可以参考 <a href="https://hexo.io/zh-cn/docs/configuration">Hexo 官方配置文档</a></p><p>到这里我们的博客在本地就已经搭建好了，但是我们还需要别人可以访问你的博客，所以现在把它部署到 GitHub 远端，这样别人就也可以访问你的博客了</p><h2 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h2><p>如果没有 GitHub 账号请注册一个<br>创建一个 github 账户名.github.io 的 public 仓库（如果你的 GitHub 账户名是 aa，创建的仓库名则为 aa.github.io）<br>安装 hexo-deployer-git:</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>网站配置 git:<br>找到文件名为<code>_config.yml</code>中的 deploy</p><pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">deploy:  type: "git"  repo: &lt;你的仓库地址&gt;  branch: &lt;所在分支&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>d 是 deploy 的简写<br>部署之后，以后在浏览器中输入仓库名就可以在远程访问了</p><h2 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">hexo n: "文章标题"：创建一篇新博客hexo clean: 清除缓存文件 ( db.json) 和生成的文件 (public)hexo g: 部署前生成hexo s: 启动本地服务器，默认情况下，http://localhost:4000/hexo d: 部署到网站<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>这里建议不管是创建编辑新博客还是修改一些配置内容之后，都希望你按照上图顺序执行上图命令 2、3、4、5。 在执行$ hexo s 命令后可以先在本地的 <code>http://localhost:4000/</code>端口预览，然后确认无误在执行$ hexo d 部署到网站</strong></p><h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>Hexo 中有很多好看的主题,可以在<a href="https://hexo.io/themes">官网主题</a>进行选择,参考官网主题配置进行安装部署.</p><p>本篇免费搭建个人博客的指南完结，如有错误，请不吝指出。</p>]]></content>
       
       
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 静态站点搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>项目流程</title>
+      <link href="/2021/06/14/xiang-mu-liu-cheng/"/>
+      <url>/2021/06/14/xiang-mu-liu-cheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一个新项目的开始流程"><a href="#一个新项目的开始流程" class="headerlink" title="一个新项目的开始流程"></a>一个新项目的开始流程</h2><p>1.创建项目文件夹</p><p>2.把它作为一个新的仓库进行代码管理（可在文件目录下执行<code>$ git init</code>创建一个 git 仓库，或者基于<code>$ git clone &lt;仓库地址&gt;</code>把远程仓库克隆下来即可）</p><p>3.初始化模块配置清单 package.json:<code>$ npm init -y</code></p><p>4.安装所需模块：<code>$ npm i xxx</code>(比如 jquery、bootstrap、less…)</p><p>5.开始正常开发,开发中可能还需要在本地配置命令去完成一些功能（例如使用 jest 写单元测试，此时需要配置 npm 可执行命令）</p><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token string">"scripts"</span><span class="token punctuation">{</span>    <span class="token property">"test"</span><span class="token operator">:</span><span class="token string">"jest"</span>    <span class="token property">"xxx"</span><span class="token operator">:</span><span class="token string">"xxx"</span>    ...<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>6.开发中我们还需要基于 git 把文件进行管理：生成对应历史版本<br>提交到暂存区、历史区、远程仓库的时候，我们还需要创建一个.gitignore 文件忽略项目中无需提交和处理的文件，（例如：node_modules、*.log、.DS_Store…）<br>需要编译时，执行<code>$ npm run (test)xxx</code></p><p>7.由于每次 git 提交时我们不会去提交 node_modules，所以团队协作开发中，我们每当拉下项目后，都需要“跑环境”：执行<code>$ npm install</code>,按照项目中的 package.json 中的依赖项信息，安装一遍缺失模块</p><h2 id="基于-npm-进行模块管理"><a href="#基于-npm-进行模块管理" class="headerlink" title="基于 npm 进行模块管理"></a>基于 npm 进行模块管理</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">npm install xxx 把模块安装在当前项目中(node_modules)npm install xxx -g 把模块安装在全局环境中npm i xxx@1.0.0 安装指定版本号的模块npm view xxx version &gt; xxx.version.json 查看某个模块的版本信息（输出到指定的JSON文件中）npm init -y 快速初始化当前项目的配置依赖清单（项目名称不能出现中文、特殊符号、大写字母）npm i xxx --save 把模块保存在清单生产依赖项中npm i xxx --save-dev 把模块保存在清单开发依赖中npm install 跑环境，按照清单安装所需的模块npm root -g 查看全局安装模块的目录npm uninstall xxx 卸载安装过的模块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>全局安装</strong>：可提供直接执行的“命令”对任何项目进行操作<br><strong>本地安装</strong>：可以直接在项目中倒入进来使用，默认不能基于命令来操作，但可基于 package.json 中的 scripts，配置一些 npm 可以执行命令，配置后通过<code>$ npm run xxx</code>运行<br><strong>dependencies</strong>：生产依赖模块（开发和项目部署的时候都需要）<br><strong>devDependencies</strong>：开发依赖模块（只有开发的时候需要）<br><strong>scripts</strong>：配置本地可执行命令</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目流程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目流程 </tag>
+            
+        </tags>
       
     </entry>
     
